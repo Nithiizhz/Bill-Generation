@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KVG Matrimony | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: #f4f8f6;
+    }
+
+    .dashboard-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 28px;
+      margin: 110px 0 20px;
+      color: #fff;
+    }
+
+    .dashboard-wrap {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 20px;
+    }
+
+    .sidebar {
+      background: #e6f4ec;
+      border-radius: 18px;
+      padding: 20px;
+      min-height: 600px;
+    }
+
+    .side-card {
+      height: 80px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #cfeedd, #e9f7f0);
+      margin-bottom: 16px;
+    }
+
+    .search-bar {
+      background: #dff2e8;
+      border-radius: 30px;
+      padding: 10px 15px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .search-bar input,
+    .search-bar select {
+      border: none;
+      border-radius: 20px;
+      padding: 8px 12px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .search-btn {
+      background: #198754;
+      color: #fff;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      border: none;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .profile-info h6 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .profile-info small {
+      color: #777;
+    }
+
+    .badge-green {
+      color: #198754;
+      font-size: 12px;
+      margin-right: 12px;
+    }
+
+    @media(max-width: 992px) {
+      .dashboard-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top main-navbar">
+  <div class="container-fluid px-4">
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <div class="logo-icon me-2">
+        <!-- SAME BLINKING EYE SVG -->
+      </div>
+      KVG Matrimony
+    </a>
+
+    <button class="navbar-toggler bg-light" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center w-100">
+        <li class="nav-item"><a class="nav-link brand-font active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link brand-font" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link brand-font" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link brand-font" href="#">Payment</a></li>
+        <li class="nav-item"><a class="nav-link brand-font" href="#">Subscription</a></li>
+
+        <!-- RIGHT -->
+        <li class="nav-item ms-auto d-flex align-items-center">
+          <i class="bi bi-bell text-white fs-5 me-3 nav-link"></i>
+          <div class="nav-profile-img"></div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- BACKGROUND -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="bg-videmp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+
+<div class="container">
+  <h2 class="dashboard-title text-center">Browse Matrimony Profiles</h2>
+  <hr class="text-white">
+
+  <div class="dashboard-wrap">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="side-card"></div>
+      <div class="side-card"></div>
+      <div class="side-card"></div>
+      <div class="side-card"></div>
+    </div>
+
+    <!-- MAIN -->
+    <div>
+
+      <div class="search-bar">
+        <input placeholder="What do you want?">
+        <select><option>Condition 1</option></select>
+        <select><option>Condition 2</option></select>
+        <select><option>Condition 3</option></select>
+        <button class="search-btn"><i class="bi bi-search"></i></button>
+      </div>
+
+      <!-- PROFILE CARDS -->
+      <div class="profile-card">
+        <div class="profile-img"></div>
+        <div class="profile-info">
+          <h6>Digeesh, 24</h6>
+          <small>Delhi · IT Professional</small><br>
+          <span class="badge-green">✔ Verified Profile</span>
+          <span class="badge-green">❤ Serious Intentions</span>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-img"></div>
+        <div class="profile-info">
+          <h6>Digeesh, 24</h6>
+          <small>Delhi · IT Professional</small><br>
+          <span class="badge-green">✔ Verified Profile</span>
+          <span class="badge-green">❤ Serious Intentions</span>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-img"></div>
+        <div class="profile-info">
+          <h6>Ranjith, 31</h6>
+          <small>Bengaluru · Engineer</small><br>
+          <span class="badge-green">✔ Verified Profile</span>
+          <span class="badge-green">❤ Serious Intentions</span>
+        </div>
+      </div>
+      <!-- PROFILE CARDS -->
+      <div class="profile-card">
+        <div class="profile-img"></div>
+        <div class="profile-info">
+          <h6>Digeesh, 24</h6>
+          <small>Delhi · IT Professional</small><br>
+          <span class="badge-green">✔ Verified Profile</span>
+          <span class="badge-green">❤ Serious Intentions</span>
+        </div>
+      </div>
+      <!-- PROFILE CARDS -->
+      <div class="profile-card">
+        <div class="profile-img"></div>
+        <div class="profile-info">
+          <h6>Digeesh, 24</h6>
+          <small>Delhi · IT Professional</small><br>
+          <span class="badge-green">✔ Verified Profile</span>
+          <span class="badge-green">❤ Serious Intentions</span>
+        </div>
+      </div>
+      
+      <div class="profile-card">
+        <div class="profile-img"></div>
+        <div class="profile-info">
+          <h6>Digeesh, 24</h6>
+          <small>Delhi · IT Professional</small><br>
+          <span class="badge-green">✔ Verified Profile</span>
+          <span class="badge-green">❤ Serious Intentions</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
